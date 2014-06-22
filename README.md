@@ -1,4 +1,4 @@
-Getting and cleaning data course project
+Getting and Cleaning Data: course project
 ===========
 
 This repo contains an R script and code book describing the analsyis of data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
