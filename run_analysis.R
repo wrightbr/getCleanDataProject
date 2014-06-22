@@ -102,9 +102,6 @@ dim(trainTest3)#10299, 82
 head(trainTest3)
 str(trainTest3)
 
-trainTest3Means<-aggregate(.~subject+activity, data=trainTest3, FUN=length, na.rm=TRUE)
-head(trainTest3, 20)
-
 trainTest3Means<-aggregate(.~subject+activity+activity_desc, data=trainTest3, FUN=mean, na.rm=TRUE)
 head(trainTest3Means, 20)
 
