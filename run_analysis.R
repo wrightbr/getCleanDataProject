@@ -27,7 +27,7 @@ trainS<-read.table("subject_train.txt")
 str(trainS)
 
 # column bind training data and add indicator for training data
-train<-tbl_df(cbind(trainS, trainY, trainX))
+train<-cbind(trainS, trainY, trainX)
 str(train)
 head(train)
 
@@ -40,7 +40,7 @@ testS<-read.table("subject_test.txt")
 str(testS)
 
 # column bind test data
-test<-tbl_df(cbind(testS, testY, testX))
+test<-cbind(testS, testY, testX)
 str(test)
 head(test)
 
@@ -74,7 +74,7 @@ str(features)
 head(features)
 
 # ...and use as descriptive names
-names(trainTest)[3:length(trainTest)]<-as.character(features[,2])
+names(trainTest)[3:563]<-as.character(features[,2])
 trainTest
 
 # change activity number to label
@@ -102,9 +102,6 @@ dim(trainTest3)#10299, 82
 head(trainTest3)
 str(trainTest3)
 
-trainTest3Means<-aggregate(.~subject+activity, data=trainTest3, FUN=length, na.rm=TRUE)
-head(trainTest3, 20)
-
 trainTest3Means<-aggregate(.~subject+activity+activity_desc, data=trainTest3, FUN=mean, na.rm=TRUE)
 head(trainTest3Means, 20)
 
@@ -112,7 +109,7 @@ trainTest4Means<-trainTest3Means[order(trainTest3Means$subject, trainTest3Means$
 head(trainTest4Means, 20)
 dim(trainTest4Means)
 
-write.csv(trainTest4Means, "trainTest4Means.csv")
+write.csv(trainTest4Means, "subjectActivityMeans.txt")
 
 
 
