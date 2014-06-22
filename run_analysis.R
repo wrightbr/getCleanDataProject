@@ -109,7 +109,7 @@ trainTest4Means<-trainTest3Means[order(trainTest3Means$subject, trainTest3Means$
 head(trainTest4Means, 20)
 dim(trainTest4Means)
 
-write.csv(trainTest4Means, "trainTest4Means.csv")
+write.csv(trainTest4Means, "subjectActivityMeans.txt")
 
 
 
