@@ -27,7 +27,7 @@ trainS<-read.table("subject_train.txt")
 str(trainS)
 
 # column bind training data and add indicator for training data
-train<-tbl_df(cbind(trainS, trainY, trainX))
+train<-cbind(trainS, trainY, trainX)
 str(train)
 head(train)
 
@@ -40,7 +40,7 @@ testS<-read.table("subject_test.txt")
 str(testS)
 
 # column bind test data
-test<-tbl_df(cbind(testS, testY, testX))
+test<-cbind(testS, testY, testX)
 str(test)
 head(test)
 
