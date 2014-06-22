@@ -1,6 +1,6 @@
-## subjectActivityMeans.txtcontainsthefollowing180observationsof82variables:
-* subject			number from 1-30 indicating person
-* activity			number from 1-6 indicating activity (see activity_desc)
+### 'subjectActivityMeans.txt' contains the following 180 observations of 82variables:
+* subject			    number from 1-30 indicating person 
+* activity			  number from 1-6 indicating activity (see activity_desc)
 * activity_desc		description of activity by person
 
 ### mean mesurements of triaxial acceleration from accelerometer (total acceleration), estimated body acceleration, and angular velocity (see http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones for more details)
