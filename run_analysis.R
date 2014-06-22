@@ -74,7 +74,7 @@ str(features)
 head(features)
 
 # ...and use as descriptive names
-names(trainTest)[3:length(trainTest)]<-as.character(features[,2])
+names(trainTest)[3:563]<-as.character(features[,2])
 trainTest
 
 # change activity number to label
